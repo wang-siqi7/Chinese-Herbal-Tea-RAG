@@ -1,10 +1,3 @@
-"""
-基于Streamlit完成WEB网页上传服务
-
-pip install streamlit
-
-Streamlit：当WEB页面元素发生变化，则代码重新执行一遍
-"""
 import time
 
 import streamlit as st
@@ -41,7 +34,3 @@ if uploader_file is not None:
         time.sleep(1)
         result = st.session_state["service"].upload_by_str(text, file_name)
         st.write(result)
-
-
-print("hahahahaH")
-

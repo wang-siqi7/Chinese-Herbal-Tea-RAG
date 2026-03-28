@@ -1,4 +1,3 @@
-
 md5_path = "./md5.text"
 
 
@@ -14,7 +13,8 @@ separators = ["\n\n", "【","\n", ".", "!", "?", "。", "！", "？", " ", ""]
 max_split_char_number = 2000        # 文本分割的阈值
 
 #
-similarity_threshold = 30            # 检索返回匹配的文档数量
+similarity_threshold = 30            # 检索返回匹配的文档数量（备用）
+retrieval_k = 100                    # 检索器返回的文档数量（实际使用）
 
 embedding_model_name = "text-embedding-v4"
 chat_model_name = "qwen3-max"

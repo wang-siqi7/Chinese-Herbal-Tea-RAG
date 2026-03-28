@@ -111,19 +111,3 @@ class KnowledgeBaseService(object):
         save_md5(md5_hex)
 
         return f"[成功]内容已经成功载入向量库，共 {len(knowledge_chunks)} 个用户"
-
-if __name__ == '__main__':
-    service = KnowledgeBaseService()
-    
-    print("1. 开始读取文件...")
-    with open("data/中药茶饮_按用户存储.txt.txt", "r", encoding="utf-8") as f:
-        data = f.read()
-    print(f"2. 文件读取完成，共 {len(data)} 字符")
-    
-    print("3. 开始上传...")
-    result = service.upload_by_str(data, "中药茶饮数据")
-    print(f"4. 上传结果：{result}")
-    
-    print("5. 开始统计向量库数量...")
-    count = service.chroma._collection.count()
-    print(f"6. 向量库中实际存储的文档数量：{count}")

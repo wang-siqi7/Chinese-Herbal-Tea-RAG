@@ -44,9 +44,9 @@ class RagService(object):
         def answer_statistical_query(input_dict):
             return f"当前共有 {self.total_users} 个用户参与本次中药茶饮调研。"
 
-        # 原有的检索器
+        # 检索器：使用配置中的 retrieval_k
         retriever = self.vector_service.vector_store.as_retriever(
-            search_kwargs={"k": 100}
+            search_kwargs={"k": config.retrieval_k}
         )
 
         # 原有的 format 函数
@@ -99,5 +99,3 @@ class RagService(object):
         )
 
         return conversation_chain
-
-
