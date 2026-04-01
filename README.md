@@ -24,3 +24,8 @@ streamlit run app_file_uploader.py
 
 # 问答界面
 streamlit run app_qa.py
+
+## 衍生项目
+
+本项目的研究成果（168份问卷数据、专家访谈、调查资料）已用于构建：
+- **[中药茶饮智能顾问 Agent](https://github.com/wang-siqi7/herb-tea-agent)**：面向消费者的智能茶饮推荐系统
